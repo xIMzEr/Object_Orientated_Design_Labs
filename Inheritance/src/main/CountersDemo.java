@@ -5,6 +5,7 @@ import lib.counters.BoundedCounter;
 import lib.counters.Counter;
 import lib.counters.ModuloCounter;
 import lib.counters.OffsetCounter;
+import lib.counters.StepCounter;
 
 /**
  * A client application that highlights the behaviour
@@ -26,7 +27,7 @@ public class CountersDemo {
 		counters.add(new ModuloCounter(0,5));
 		counters.add(new OffsetCounter(100, 5));
 		counters.add(new BoundedCounter(50, 50, 60));
-		//add a StepCounter once implemented
+		counters.add(new StepCounter(2, 5));
 		
 		for (Counter c : counters) {
 			
