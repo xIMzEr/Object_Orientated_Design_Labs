@@ -30,19 +30,20 @@ public class StepCounter extends Counter {
 	}
 
 	//Methods
+	@Override
 	public void increment() {
-		int count = this.getCount() + step;
-		this.setCount(count);
+		for(int i = 0; i < step; i ++) {super.increment();}
 	}
-	
+
+	@Override
 	public void decrement() {
-		int count = this.getCount() - step;
-		this.setCount(count);
+		for(int i = 0; i < step; i ++) {super.decrement();}
+		
 	}
 	
 	@Override
 	public String toString() {
-		return this.getClass().getSimpleName() + this.toString();
+		return super.toString() + "[Step = " + this.step + "]";
 		
 	}
 
